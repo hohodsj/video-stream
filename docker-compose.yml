@@ -23,9 +23,11 @@ services:
       - "3000:3000"
     depends_on:
       - backend
-      
+
   mongo:
     init: true
+    logging:
+      driver: none
     image: mongo
     restart: always
     environment:
@@ -36,6 +38,8 @@ services:
 
   mongo-express:
     init: true
+    logging:
+      driver: none
     image: mongo-express
     restart: always
     ports:

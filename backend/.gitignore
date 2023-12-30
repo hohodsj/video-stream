@@ -2,3 +2,5 @@
 /node_modules
 /.pnp
 .pnp.js
+/videos
+.DS_Store
