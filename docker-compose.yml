@@ -2,11 +2,12 @@ version: '3'
 services:
   backend:
     init: true
+    restart: always
     build: ./backend
     command: npm start
     volumes:
       - ./backend:/app
-    ports: 
+    ports:
       - "8000:8000"
     expose:
       - "8000"

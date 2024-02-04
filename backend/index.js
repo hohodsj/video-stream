@@ -20,7 +20,7 @@ app.get("/playlists", (req,res) => {
 // Play video given name of the list
 app.get('/videos/:playlist', (req, res) => {
     const playlist = req.params.playlist;
-    findCurrentPlayingVideo(playlist)
+    findCurrentPlayingVideo(playlist, req.headers.range, res)
 })
 
 app.get("/scan", async(req, res) => {
