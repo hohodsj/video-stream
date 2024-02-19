@@ -2,9 +2,9 @@ FROM node:21
 
 WORKDIR /app
 
-# RUN apt update
+RUN apt update
 
-# RUN apt install -y ffmpeg
+RUN apt install -y ffmpeg
 
 COPY package.json /app/
 
