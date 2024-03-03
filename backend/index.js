@@ -3,8 +3,10 @@ const {findCurrentPlayingVideo} = require('./utils/playlist')
 const {scanVideosInPath} = require('./utils/scanUtil')
 const mongoose = require('mongoose')
 
-const dbUrl = "mongodb://mongo"
-mongoose.connect(dbUrl);
+const dbUrl = "mongodb://root:example@mongo"
+mongoose.connect(dbUrl,{
+    dbName: 'VideoStream'
+});
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
 db.once("open", () => {
